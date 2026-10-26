@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kanaka Dharshini M | AI &amp; Data Science</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#eef2f8;--surface:#ffffff;--ink:#14213d;--muted:#4b5a78;--line:#cfd8e8;--accent:#2f4bff;--accent-ink:#ffffff;--mark:#ffb703;--grid:rgba(47,75,255,.07);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1526;--surface:#16203a;--ink:#e8edf7;--muted:#9fb0d0;--line:#2a3860;--accent:#7f95ff;--accent-ink:#0e1526;--grid:rgba(127,149,255,.08);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1526;--surface:#16203a;--ink:#e8edf7;--muted:#9fb0d0;--line:#2a3860;--accent:#7f95ff;--accent-ink:#0e1526;--grid:rgba(127,149,255,.08);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px;color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--mark);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;overflow-x:auto}
+nav a{color:var(--muted);text-decoration:none;font-weight:500;font-size:15px;white-space:nowrap}
+nav a:hover{color:var(--ink)}
+.brand{font:800 18px Bricolage Grotesque,sans-serif;color:var(--ink);text-decoration:none;white-space:nowrap}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 10px;font:inherit;font-size:14px;cursor:pointer}
+header.hero{padding:72px 0 56px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+h1{font:800 clamp(2.6rem,7vw,4.6rem)/1 Bricolage Grotesque,sans-serif;margin:0 0 16px;letter-spacing:-.02em}
+.role{font:500 1.25rem/1.4 Bricolage Grotesque,sans-serif;color:var(--muted);margin:0 0 20px}
+.lede{max-width:56ch;color:var(--muted);margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 20px;border-radius:8px;font-weight:600;text-decoration:none;border:1px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+.chart svg{display:block;width:100%;height:auto}
+.glance{padding:24px}.glance h3{margin-bottom:12px}.glance dl{margin:0}.glance dl div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line)}.glance dt{color:var(--muted);font-size:15px}.glance dd{margin:0;font-weight:500}
+.chart .ax{stroke:var(--line);stroke-width:1}
+.chart .dot{fill:var(--accent)}
+.chart .fit{stroke:var(--mark);stroke-width:3;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.4s .3s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.chart .fit{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font:700 1.9rem/1.2 Bricolage Grotesque,sans-serif;margin:0 0 24px}
+h3{font:700 1.2rem/1.3 Bricolage Grotesque,sans-serif;margin:0}
+.proj{display:grid;grid-template-columns:1fr;gap:6px;padding:20px 0;border-bottom:1px solid var(--line)}
+.proj:last-child{border-bottom:0}
+.proj p{margin:0;color:var(--muted);max-width:68ch}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.tag{font-size:14px;font-weight:500;padding:3px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.when{color:var(--muted);font-size:15px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px 32px}
+.skills dt{font-weight:600}
+.skills dd{margin:2px 0 0;color:var(--muted)}
+ul.plain{list-style:none;margin:0;padding:0}
+ul.plain li{padding:12px 0;border-bottom:1px solid var(--line)}
+ul.plain li:last-child{border-bottom:0}
+ul.plain span{display:block;color:var(--muted);font-size:15px}
+footer{padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+@media (max-width:760px){header.hero{grid-template-columns:1fr;padding-top:48px}nav ul{gap:14px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="brand" href="#top">Kanaka</a>
+<ul><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul>
+<button id="theme" type="button" aria-label="Switch colour theme">Theme</button></div></nav>
+
+<main class="wrap" id="top">
+<header class="hero">
+<div>
+<h1>Kanaka Dharshini M</h1>
+<p class="role">AI &amp; Data Science undergraduate, third year</p>
+<p class="lede">I turn raw data into insights and build intelligent backend solutions, with hands-on work in data analytics, machine learning, deep learning, cloud computing and data visualization.</p>
+<div class="btns"><a class="btn primary" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</div>
+<div class="chart glance">
+<h3>At a glance</h3>
+<dl>
+<div><dt>Studying</dt><dd>B.Tech, AI &amp; Data Science (2024–2028)</dd></div>
+<div><dt>College</dt><dd>Sri Krishna College of Engineering and Technology</dd></div>
+<div><dt>CGPA</dt><dd>8.0</dd></div>
+<div><dt>Experience</dt><dd>Data Analytics Intern, Thiranex</dd></div>
+<div><dt>Focus</dt><dd>Data analytics, machine learning, NLP, backend</dd></div>
+<div><dt>Location</dt><dd>Coimbatore, India</dd></div>
+</dl>
+</div>
+</header>
+
+<section id="projects"><h2>Projects</h2>
+<article class="proj"><div class="row"><h3>Marketplace AI Visibility Auditor</h3><span class="when">Adobe University Hackathon, Aug–Sep 2026</span></div>
+<p>A Python tool that audits how visible a marketplace is to AI systems. It runs semantic checks, sitemap analysis and structured data validation, with site-type validation, specialist reliability tests and automated safety checks to keep audit quality high.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">AI</span><span class="tag">Data analysis</span><span class="tag">JSON</span></div></article>
+<article class="proj"><h3>InterviewAI: Mock Interview Analyzer</h3>
+<p>An AI platform that analyses your interview answers and gives feedback on them.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Machine learning</span><span class="tag">NLP</span><span class="tag">Text analysis</span></div></article>
+<article class="proj"><h3>Sales Revenue Analysis Dashboard</h3>
+<p>A dashboard that tracks sales, revenue trends and business KPIs through data visualization.</p>
+<div class="tags"><span class="tag">SQL</span><span class="tag">Data analytics</span><span class="tag">Dashboard design</span></div></article>
+<article class="proj"><h3>Public Library Management System</h3>
+<p>A system for book cataloguing, member management, and issue and return tracking, with a normalized database and full CRUD operations.</p>
+<div class="tags"><span class="tag">DBMS</span><span class="tag">SQL</span><span class="tag">ER diagram</span><span class="tag">Normalization</span><span class="tag">OOP</span></div></article>
+</section>
+
+<section id="experience"><h2>Experience</h2>
+<div class="row"><h3>Data Analytics Intern, Thiranex</h3><span class="when">Completed Jun 2026</span></div>
+<p>Cleaned and analysed datasets with SQL and Excel, built interactive dashboards and reports, tracked KPIs, sales trends, revenue metrics and customer insights, and turned the findings into data-driven recommendations.</p>
+</section>
+
+<section id="skills"><h2>Skills</h2>
+<dl class="skills">
+<div><dt>Programming</dt><dd>Python, JavaScript, R</dd></div>
+<div><dt>ML / AI</dt><dd>NLP, Transformers, Scikit-learn</dd></div>
+<div><dt>Web</dt><dd>React, Node.js, Django</dd></div>
+<div><dt>Databases</dt><dd>MongoDB, MySQL, Firebase</dd></div>
+<div><dt>Tools</dt><dd>Git, Power BI, Docker, Google Cloud</dd></div>
+<div><dt>Languages</dt><dd>English, Tamil, Kannada</dd></div>
+</dl></section>
+
+<section id="education"><h2>Education</h2>
+<div class="row"><h3>B.Tech, Artificial Intelligence and Data Science</h3><span class="when">2024–2028</span></div>
+<p>Sri Krishna College of Engineering and Technology, Coimbatore. CGPA 8.0. Solved 200+ LeetCode problems on data structures and algorithms, and worked hands-on with classical-quantum computing systems.</p>
+<h3 style="margin-top:28px">Certifications</h3>
+<ul class="plain">
+<li>Data Analytics, Thiranex Internship<span>Jun 2026. SQL, Excel and visualization tools for data-informed decisions.</span></li>
+<li>Operating Systems Power User, Google<span>Aug 2025. Operating systems, system administration and troubleshooting.</span></li>
+<li>Generative AI-Powered SQL Data Analysis<span>Jul 2025. Using generative AI with SQL to get insights from structured datasets.</span></li>
+<li>Hybrid Quantum-Classical Computing<span>Feb 2025. Optimized problem solving.</span></li>
+<li>HTML, CSS Designing, Infosys<span>Nov 2024. Designed a company website.</span></li>
+</ul></section>
+
+<section id="contact"><h2>Contact</h2>
+<p>Open to internships and collaborations. Based in Coimbatore, India.</p>
+<div class="btns">
+<a class="btn primary" href="mailto:kandharshini9@gmail.com">Email me</a>
+<a class="btn" href="https://www.linkedin.com/in/kanaka-dharshini-m-6a593b32b" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/KanakaDharshini10" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://leetcode.com/problemset/" target="_blank" rel="noopener">LeetCode</a>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Kanaka Dharshini M</div></footer>
+<script>
+(function(){var b=document.getElementById('theme'),r=document.documentElement;
+try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s)}catch(e){}
+b.addEventListener('click',function(){var dark=r.getAttribute('data-theme')?r.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var n=dark?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}});})();
+</script>
+</body>
+</html>
